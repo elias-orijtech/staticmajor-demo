@@ -13,3 +13,17 @@ func LeakFile() error {
 	// Leak f, thus triggering a leak warning.
 	return nil
 }
+
+func FuzzyLeak() {
+	_ = newResource()
+}
+
+type Resource struct {
+}
+
+func (r *Resource) Close() {
+}
+
+func newResource() *Resource {
+	return new(Resource)
+}

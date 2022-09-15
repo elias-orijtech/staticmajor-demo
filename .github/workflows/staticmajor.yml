@@ -10,4 +10,5 @@ jobs:
         id: staticmajor
         uses: orijtech/staticmajor-action@main
         with:
+            fuzzy: 'true'
             packages: ./leak
