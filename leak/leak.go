@@ -16,6 +16,7 @@ func LeakFile() error {
 
 func FuzzyLeak() {
 	_ = newResource()
+	_ = newResource()
 }
 
 type Resource struct {
